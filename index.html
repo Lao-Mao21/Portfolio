@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="src/output.css" rel="stylesheet">
+  <!-- fonts, replaceable choices -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&family=Zeyada&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    /* simple font utility classes*/
+    .font-system { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+    .font-inter { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+    .font-poppins { font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+    .font-playfair { font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; }
+    .font-zeyada { font-family: 'Zeyada', cursive; }
+    .font-audiowide { font-family: "Audiowide", sans-serif;}
+    .font-genos { font-family: "Genos", sans-serif;}
+    :root { --transition: 200ms ease-in-out; }
+    .theme-transition { transition: color var(--transition), background-color var(--transition); }
+    /* placeholder project card image sizing, remove after adding images */
+    .placeholder-img { background: linear-gradient(135deg,#e2e8f0,#cbd5e1); min-height:160px; display:flex; align-items:center; justify-content:center; color:#475569; }
+  </style>
+  
+</head>
+  <body class="font-inter bg-white dark:bg-black">
+  <nav class="relative bg-white dark:bg-black">
+    <div class="mx-auto max-w-7xl py-1 px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-24 items-center justify-between">
+        <div class="inset-y-0 left-0 flex items-center sm:hidden"> <!--mobile-->
+          <!-- Mobile menu button-->
+          <button type="button" command="--toggle" commandfor="mobile-menu" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
+            <span class="absolute -inset-0.5"></span>
+            <span class="sr-only">Open main menu</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 in-aria-expanded:hidden">
+              <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
+              <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-1 items-stretch justify-between sm:items-center sm:justify-between">
+          <div class="flex shrink-0 items-center">
+            <!--logo-->
+            <a href="#home" class="text-5xl font-bold font-audiowide text-red-600 hover:text-rose-500 dark:text-red-600 dark:hover:text-rose-500 transition-colors"><span class="text-black dark:text-white">Jo</span>nas</a>
+          </div>
+          <div class="hidden sm:ml-6 sm:flex items-center justify-center">
+            <div class="flex space-x-4 text-slate-800 dark:text-slate-200">
+              <a href="#" class="rounded-md px-3 py-2 text-lg font-medium font-poppins hover:bg-slate-200 hover:text-slate-600">Home</a>
+              <a href="#" class="rounded-md px-3 py-2 text-lg font-medium font-poppins hover:bg-slate-200 hover:text-slate-600">Portfolio</a>
+              <a href="#" class="rounded-md px-3 py-2 text-lg font-medium font-poppins hover:bg-slate-200 hover:text-slate-600">Service</a>
+              <a href="#" class="rounded-md px-3 py-2 text-lg font-medium font-poppins hover:bg-slate-200 hover:text-slate-600">Projects</a>
+            </div>
+          </div>
+          <div class="flex justify-center items-end sm:items-stretch">
+            <a href="#contact" class="px-3 py-2 text-lg font-bold border text-slate-800 dark:text-white hover:border-transparent hover:bg-slate-200 hover:text-slate-600 transition ease-in-out duration-300">Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="block sm:hidden">
+      <div class="space-y-1 px-2 pt-2 pb-3">
+        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/10 hover:text-white font-poppins">Home</a>
+        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/10 hover:text-white font-poppins">Portfolio</a>
+        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/10 hover:text-white font-poppins">Service</a>
+        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/10 hover:text-white font-poppins">Projects</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 1st section -->
+  <header id="home" class="w-full h-auto p-6 pt-24 pb-20 theme-transition">
+    <div class="mx-auto max-w-7xl flex flex-col md:flex-row items-center gap-x-24">
+      <div class="flex-1 space-y-4">
+        <h1 class="text-4xl md:text-5xl font-bold font-poppins dark:text-white">Jonas Buenavides</h1>
+        <h2 class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-playfair">Web Developer & Designer</h2>
+        <p class="md:text-xl text-justify text-gray-700 dark:text-gray-300">I don’t just build websites; I craft digital experiences that are visually stunning and technically seamless. With a dual background in UI/UX design and full-stack development, I bridge the gap between aesthetic vision and functional reality. Whether it’s a high-converting landing page or a complex web application, I focus on performance, accessibility, and user-centric design to help brands make a lasting impact.</p>
+        <div class="flex gap-6">
+          <a href="#projects" class="rounded-md bg-slate-600 font-genos text-2xl text-white px-4 py-2">View Projects</a>
+        </div>
+      </div>
+      <div class="w-64 h-64 rounded-lg overflow-hidden border">
+        <img src="resources/img/portfolio_img.JPG" alt="Profile placeholder" class="object-cover w-full h-full">
+      </div>
+    </div>
+  </header>
+
+  <!-- About section -->
+  <section id="about" class="mx-auto max-w-7xl pt-24 pb-12">
+    <h3 class="mb-4 font-playfair dark:text-white text-center text-3xl">About</h3>
+    <p class="text-gray-700 dark:text-gray-300 font-poppins text-xl text-center">I am a Web Developer and Designer focused on creating lightning-fast digital products. My philosophy is simple: a beautiful design is useless if it’s slow, and a fast site is useless if it’s hard to navigate. I combine utility-first approach with modern frameworks to deliver pixel-perfect results.</p>
+  </section>
+
+  <!-- Skills section -->
+  <section id="skills" class="bg-gray-50 dark:bg-neutral-900 p-6 pt-12 pb-12">
+    <div class="mx-auto max-w-7xl">
+      <h3 class="text-2xl font-semibold mb-6 font-playfair dark:text-white">Skills</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 dark:text-white">
+        <div class="p-4 border rounded">HTML</div>
+        <div class="p-4 border rounded">CSS / Tailwind</div>
+        <div class="p-4 border rounded">JavaScript</div>
+        <div class="p-4 border rounded">Design / Figma</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects section -->
+  <section id="projects" class="mx-auto max-w-7xl p-6 pt-12 pb-12">
+    <h3 class="text-2xl font-semibold mb-6 font-playfair dark:text-white">Projects</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="border rounded p-4">
+        <div class="placeholder-img rounded mb-4">Project Image</div>
+        <h4 class="font-semibold font-poppins">Project Title</h4>
+        <p class="text-sm text-gray-600 dark:text-gray-300">Short description — replace with project details and links.</p>
+      </div>
+      <div class="border rounded p-4">
+        <div class="placeholder-img rounded mb-4">Project Image</div>
+        <h4 class="font-semibold font-poppins">Project Title</h4>
+        <p class="text-sm text-gray-600 dark:text-gray-300">Short description — replace with project details and links.</p>
+      </div>
+      <div class="border rounded p-4">
+        <div class="placeholder-img rounded mb-4">Project Image</div>
+        <h4 class="font-semibold font-poppins">Project Title</h4>
+        <p class="text-sm text-gray-600 dark:text-gray-300">Short description — replace with project details and links.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact section -->
+  <section id="contact" class="bg-white dark:bg-neutral-900 p-6 pt-12 pb-12">
+    <div class="mx-auto max-w-3xl">
+      <h3 class="text-2xl font-semibold mb-4 font-playfair dark:text-white">Contact</h3>
+      <p class="text-gray-700 dark:text-gray-300 mb-4">Replace with your contact email, social links, or add a contact form.</p>
+      <form class="grid grid-cols-1 gap-4">
+        <input type="text" placeholder="Your name" class="border rounded p-2 bg-white/80 dark:bg-black/80" />
+        <input type="email" placeholder="Your email" class="border rounded p-2 bg-white/80 dark:bg-black/80" />
+        <textarea placeholder="Message" rows="4" class="border rounded p-2 bg-white/80 dark:bg-black/80"></textarea>
+        <button class="rounded-md bg-blue-600 text-white px-4 py-2">Send message</button>
+      </form>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-gray-100 dark:bg-neutral-900 p-6">
+    <div class="mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <p class="text-sm text-gray-700 dark:text-gray-300">© Your Name — Replace this with your name and year</p>
+      </div>
+      <div class="flex gap-4">
+        <a href="#" class="text-sm text-gray-700 dark:text-gray-300">Twitter</a>
+        <a href="#" class="text-sm text-gray-700 dark:text-gray-300">GitHub</a>
+        <a href="#" class="text-sm text-gray-700 dark:text-gray-300">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
